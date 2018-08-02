@@ -3,7 +3,7 @@
 
 <div class="data_list">
     <div class="data_list_title">
-        <a><i class="fa fa-info-circle"></i> &nbsp;CV</a>
+        <a><i class="fa fa-file-alt"></i> &nbsp;个人简历</a>
     </div>
     <div class="datas">
             <ul>

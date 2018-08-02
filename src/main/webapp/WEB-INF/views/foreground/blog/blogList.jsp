@@ -4,14 +4,14 @@
 
 <div class="data_list">
           <div class="data_list_title">
-            <img src="${pageContext.request.contextPath}/static/images/list_icon.png"/>&nbsp;最新博客
+            <i class="fa fa-list-ul"></i> &nbsp;最新博客
         </div>
         <div class="datas">
             <ul>
                 <c:forEach items="${blogList}" var="blog">
                     <li style="margin-bottom: 30px">
                           <span class="title">
-                              <%--<img alt="文章类型" src="${pageContext.request.contextPath}/static/userImages/yuan.jpg">--%>
+                              <i class="fa fa-file-alt"></i>
                               <a href="${pageContext.request.contextPath}/blog/articles/${blog.id}.html">${blog.title }</a>
                           </span>
                           <span class="summary">摘要: ${blog.summary }....</span>

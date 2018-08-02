@@ -18,8 +18,7 @@
 
 <div class="data_list">
     <div class="data_list_title">
-        <img
-            src="${pageContext.request.contextPath}/static/images/byType_icon.png" />
+        <i class="fa fa-layer-group"></i>
         文章分类
     </div>
     <div class="datas">
@@ -35,8 +34,7 @@
 
 <div class="data_list">
     <div class="data_list_title">
-        <img
-            src="${pageContext.request.contextPath}/static/images/byDate_icon.png" />
+        <i class="fa fa-calendar-alt"></i>
         文章存档
     </div>
     <div class="datas">
@@ -52,8 +50,7 @@
 
 <div class="data_list">
     <div class="data_list_title">
-        <img
-            src="${pageContext.request.contextPath}/static/images/link_icon.png" />
+        <i class="fa fa-link"></i>
         友情链接
     </div>
     <div class="datas">
@@ -67,8 +64,7 @@
 
 <div class="data_list">
     <div class="data_list_title">
-        <img
-            src="${pageContext.request.contextPath}/static/images/comment_icon.png" />
+        <i class="fa fa-share-square"></i>
         分享到
     </div>
     <div class="datas">

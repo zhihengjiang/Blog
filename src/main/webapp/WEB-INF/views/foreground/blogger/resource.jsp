@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/fontawesome5.2.0/css/all.min.css">
 <div class="data_list">
     <div class="data_list_title">
-        <i class="fa fa-info"></i> &nbsp;工具
+        <i class="fa fa-toolbox"></i> &nbsp;工具
     </div>
     <div class="datas">
             <ul>

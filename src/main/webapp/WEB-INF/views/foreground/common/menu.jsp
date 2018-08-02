@@ -37,14 +37,16 @@
                    onclick="changeClass(this)">CV</a></li>
               <li><a class="navbar-brand" href="${pageContext.request.contextPath}/blogger/resource.html"
                    onclick="changeClass(this)">工具</a></li>
-              <li><a class="navbar-brand" href="${pageContext.request.contextPath}/user/login.do" target="blank">登录</a></li>
+              <li><a class="navbar-brand" href="${pageContext.request.contextPath}/user/login.do" target="blank"><i
+                      class="fa fa-user-alt"></i>
+              </a></li>
           </ul>
           <form action="${pageContext.request.contextPath}/blog/search.do" class="navbar-form navbar-right"
                 role="search" method="post" onsubmit="return checkData()">
               <div class="form-group">
                   <input type="text" id="q" name="q" value="${q}" class="form-control" placeholder="请输入要查询的关键字">
               </div>
-            <button type="submit" class="btn btn-default">搜索</button>
+            <button type="submit" class="btn btn-default"><i class="fa fa-search"></i> </button>
           </form>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
