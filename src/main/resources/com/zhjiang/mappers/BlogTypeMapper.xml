@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhjiang.dao.BlogTypeDao">
+
+    <resultMap type="BlogType" id="BlogTypeResult">
+        <id property="id" column="id"/>
+        <result property="typeName" column="typeName"/>
+        <result property="orderNum" column="orderNum"/>
+        <result property="blogCount" column="blogCount"/>
+    </resultMap>
+
+
+    <select id="getBlogTypeData" resultMap="BlogTypeResult">
+        SELECT t2.* ,COUNT(t1.id) AS blogCount
+        FROM t_blog t1 RIGHT JOIN t_blogtype t2 ON t1.type_id = t2.id
+        GROUP BY t2.id
+        ORDER BY t2.orderNum
+    </select>
+
+    <select id="findById" parameterType="Integer" resultMap="BlogTypeResult">
+        SELECT * FROM t_blogtype WHERE id=#{id}
+    </select>
+
+    <select id="listBlogType" parameterType="Map" resultMap="BlogTypeResult">
+         SELECT * FROM t_blogtype
+         <if test="start!=null and pageSize!=null">
+             limit #{start},#{pageSize}
+         </if>
+    </select>
+
+    <select id="getTotal" parameterType="Map" resultType="Long">
+        SELECT COUNT(*) FROM t_blogtype
+    </select>
+
+    <insert id="addBlogType" parameterType="BlogType" keyProperty="id" useGeneratedKeys="true">
+        INSERT INTO t_blogtype VALUES(null,#{typeName},#{orderNum})
+    </insert>
+
+    <delete id="deleteBlogType" parameterType="Integer">
+        delete from t_blogtype where id=#{id}
+    </delete>
+
+    <update id="updateBlogType" parameterType="BlogType">
+        update t_blogtype
+        <set>
+            <if test="typeName!=null and typeName!=''">
+                 typeName=#{typeName},
+             </if>
+             <if test="orderNum!=null and orderNum!=''">
+                 orderNum=#{orderNum},
+             </if>
+        </set>
+        where id=#{id}
+    </update>
+
+</mapper> 
