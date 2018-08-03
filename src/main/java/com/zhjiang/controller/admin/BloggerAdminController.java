@@ -4,13 +4,11 @@ import java.io.File;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import com.zhjiang.entity.Blogger;
 import com.zhjiang.service.BloggerService;
 import com.zhjiang.util.CryptographyUtil;
 import com.zhjiang.util.DateUtil;
-import com.zhjiang.util.ResponseUtil;
 import net.sf.json.JSONObject;
 
 import org.apache.shiro.SecurityUtils;
@@ -18,6 +16,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 /**
@@ -46,17 +45,15 @@ public class BloggerAdminController {
 
     /**
      *
-     * @param response
-     * @return
-     * @throws Exception
+     * @return 博客数据
      */
-    @RequestMapping("/findBlogger")
-    public String findBlogger(HttpServletResponse response) throws Exception {
+    @RequestMapping(value = "/findBlogger",produces = "application/json;charset=utf-8")
+    @ResponseBody
+    public String findBlogger() {
 
         Blogger blogger = bloggerService.getBloggerData();
         JSONObject jsonObject = JSONObject.fromObject(blogger);
-        ResponseUtil.write(response, jsonObject);
-        return null;
+        return jsonObject.toString();
     }
 
     /**
@@ -64,16 +61,14 @@ public class BloggerAdminController {
      * @param imageFile 头像文件
      * @param blogger 博主信息
      * @param request 请求
-     * @param response
-     * @throws Exception
      */
 
     @RequestMapping("/save")
-    public void save(
+    @ResponseBody
+    public String save(
             @RequestParam("imageFile") MultipartFile imageFile,
             Blogger blogger,
-            HttpServletRequest request,
-            HttpServletResponse response) throws Exception {
+            HttpServletRequest request) throws Exception {
 
         if(!imageFile.isEmpty()) {
             String filePath = request.getServletContext().getRealPath("/");
@@ -88,20 +83,17 @@ public class BloggerAdminController {
         } else {
             result.put("success", false);
         }
-        response.getWriter().write(result.toString());
+        return result.toString();
     }
 
     /**
      *
      * @param password 新密码
-     * @param response
-     * @return
-     * @throws Exception
      */
     @RequestMapping("/modifyPassword")
+    @ResponseBody
     public String modifyPassword(
-            @RequestParam("password") String password,
-            HttpServletResponse response) throws Exception {
+            @RequestParam("password") String password)  {
 
         Blogger blogger = new Blogger();
         blogger.setPassword(CryptographyUtil.md5(password, "javacoder"));
@@ -112,18 +104,16 @@ public class BloggerAdminController {
         } else {
             result.put("success", false);
         }
-        ResponseUtil.write(response, result);
-        return null;
+        return result.toString();
     }
 
 
     /**
      *登出
      * @return 登出后重定向的视图名
-     * @throws Exception
      */
     @RequestMapping("/logout")
-    public String logout() throws Exception {
+    public String logout() {
 
         SecurityUtils.getSubject().logout();
         return "redirect:/user/login.do";

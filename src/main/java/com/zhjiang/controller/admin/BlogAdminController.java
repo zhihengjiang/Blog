@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Map;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletResponse;
 
 import com.zhjiang.entity.Blog;
 import com.zhjiang.entity.BlogType;
@@ -15,7 +14,6 @@ import com.zhjiang.service.BlogService;
 import com.zhjiang.service.BlogTypeService;
 import com.zhjiang.service.CommentService;
 import com.zhjiang.util.DateJsonValueProcessor;
-import com.zhjiang.util.ResponseUtil;
 import com.zhjiang.util.StringUtil;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;

@@ -6,7 +6,6 @@ import java.util.Map;
 import javax.annotation.Resource;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import com.zhjiang.entity.BlogType;
 import com.zhjiang.entity.Blogger;
@@ -15,11 +14,11 @@ import com.zhjiang.service.BlogService;
 import com.zhjiang.service.BlogTypeService;
 import com.zhjiang.service.BloggerService;
 import com.zhjiang.service.LinkService;
-import com.zhjiang.util.ResponseUtil;
 import net.sf.json.JSONObject;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.support.RequestContextUtils;
 
 /**
@@ -43,14 +42,12 @@ public class SystemAdminController {
     /**
      *
      * @param request
-     * @param response
-     * @return
-     * @throws Exception
+     * @return 操作结果json
      */
     @RequestMapping("/refreshSystemCache")
+    @ResponseBody
     public String refreshSystemCache(
-            HttpServletRequest request,
-            HttpServletResponse response) throws Exception {
+            HttpServletRequest request)  {
 
         ServletContext application = RequestContextUtils.getWebApplicationContext(request).getServletContext();
 
@@ -73,7 +70,6 @@ public class SystemAdminController {
 
         JSONObject result = new JSONObject();
         result.put("success", true);
-        ResponseUtil.write(response, result);
-        return null;
+        return result.toString();
     }
 }

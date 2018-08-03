@@ -11,13 +11,13 @@ import com.zhjiang.entity.BlogType;
 import com.zhjiang.entity.PageBean;
 import com.zhjiang.service.BlogService;
 import com.zhjiang.service.BlogTypeService;
-import com.zhjiang.util.ResponseUtil;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * 处理后台关于博客类型页面的请求
@@ -46,19 +46,17 @@ public class BlogTypeAdminController {
      *博客类型数据列表
      * @param page 页码
      * @param rows 行数
-     * @param response
-     * @return
-     * @throws Exception
+     * @return json数据
      */
-    @RequestMapping("/listBlogType")
+    @RequestMapping(value = "/listBlogType",produces = "application/json;charset=utf-8")
+    @ResponseBody
     public String listBlogType(
             @RequestParam(value = "page", required = false) String page,
-            @RequestParam(value = "rows", required = false) String rows,
-            HttpServletResponse response) throws Exception {
+            @RequestParam(value = "rows", required = false) String rows){
 
         PageBean pageBean = new PageBean(Integer.parseInt(page),
                 Integer.parseInt(rows));
-        Map<String, Object> map = new HashMap<String, Object>();
+        Map<String, Object> map = new HashMap<>();
 
         map.put("start", pageBean.getStart());
         map.put("pageSize", pageBean.getPageSize());
@@ -69,24 +67,18 @@ public class BlogTypeAdminController {
         JSONArray jsonArray = JSONArray.fromObject(blogTypeList);
         result.put("rows", jsonArray);
         result.put("total", total);
-        ResponseUtil.write(response, result);
-        return null;
+        return result.toString();
     }
 
     /**
      *保存对博客类型数据的修改
      * @param blogType 博客类型数据
-     * @param response
-     * @throws Exception
      */
+    @ResponseBody
     @RequestMapping("/save")
-    public void save(BlogType blogType, HttpServletResponse response)
-            throws Exception {
+    public String save(BlogType blogType) {
 
-        int resultTotal = 0;
-        String t = blogType.getTypeName();
-        System.out.println("id:"+blogType.getId()+",类型名："+t.equals(new String(t.getBytes("utf-8"),"utf-8")));
-        System.out.println("id:"+blogType.getId()+",类型名："+t.equals(new String(t.getBytes("GBK"),"GBK")));
+        int resultTotal;
         if (blogType.getId() == null) {
             resultTotal = blogTypeService.addBlogType(blogType);
         } else {
@@ -99,20 +91,17 @@ public class BlogTypeAdminController {
         } else {
             result.put("success", false);
         }
-        response.getWriter().write(result.toString());
-//        ResponseUtil.write(response, result.toString());
-       // return null;
+        return result.toString();
     }
 
 
     /**
      *删除选中的博客类型
      * @param ids 所有要删除的博客类型id
-     * @param response
-     * @throws Exception
      */
-    @RequestMapping("/delete")
-    public void deleteBlog(
+    @ResponseBody
+    @RequestMapping(value = "/delete",produces = "application/json;charset=utf-8")
+    public String deleteBlog(
             @RequestParam(value = "ids", required = false) String ids,
             HttpServletResponse response) throws Exception {
 
@@ -127,9 +116,8 @@ public class BlogTypeAdminController {
             }
         }
         result.put("success", true);
-        response.getWriter().write(result.toString());
-//        ResponseUtil.write(response, result);
-//        return null;
+        return result.toString();
+
     }
 
 

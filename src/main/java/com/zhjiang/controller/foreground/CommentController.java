@@ -9,12 +9,12 @@ import com.zhjiang.entity.Blog;
 import com.zhjiang.entity.Comment;
 import com.zhjiang.service.BlogService;
 import com.zhjiang.service.CommentService;
-import com.zhjiang.util.ResponseUtil;
 import net.sf.json.JSONObject;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * 博客页面评论
@@ -40,7 +40,8 @@ public class CommentController {
      * @return
      * @throws Exception
      */
-    @RequestMapping("/save")
+    @RequestMapping(value = "/save",produces = "application/json;charset=utf-8")
+    @ResponseBody
     public String save(
             Comment comment,
             @RequestParam("imageCode")String imageCode,
@@ -69,7 +70,6 @@ public class CommentController {
         if(resultTotal > 0) {
             result.put("success", true);
         }
-        ResponseUtil.write(response, result);
-        return null;
+        return result.toString();
     }
 }

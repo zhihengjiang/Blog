@@ -5,13 +5,11 @@ import java.util.List;
 import java.util.Map;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletResponse;
 
 import com.zhjiang.entity.Comment;
 import com.zhjiang.entity.PageBean;
 import com.zhjiang.service.CommentService;
 import com.zhjiang.util.DateJsonValueProcessor;
-import com.zhjiang.util.ResponseUtil;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import net.sf.json.JsonConfig;
@@ -19,6 +17,7 @@ import net.sf.json.JsonConfig;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * 处理评论管理页面的请求
@@ -55,16 +54,14 @@ public class CommentAdminController {
      * @param page 页数
      * @param rows 行数
      * @param state 状态
-     * @param response
      * @return
-     * @throws Exception
      */
-    @RequestMapping("/listComment")
+    @RequestMapping(value = "/listComment",produces = "application/json;charset=utf-8")
+    @ResponseBody
     public String listBlog(
             @RequestParam(value = "page", required = false) String page,
             @RequestParam(value = "rows", required = false) String rows,
-            @RequestParam(value = "state", required = false) String state,
-            HttpServletResponse response) throws Exception {
+            @RequestParam(value = "state", required = false) String state)  {
 
         PageBean pageBean = new PageBean(Integer.parseInt(page),
                 Integer.parseInt(rows));
@@ -82,8 +79,8 @@ public class CommentAdminController {
         JSONArray jsonArray = JSONArray.fromObject(commentList, jsonConfig);
         result.put("rows", jsonArray);
         result.put("total", total);
-        ResponseUtil.write(response, result);
-        return null;
+        return result.toString();
+
     }
 
 
@@ -91,15 +88,14 @@ public class CommentAdminController {
      *评论审核
      * @param ids 所有要审核的评论id,以“,”符号分割
      * @param state 要设置的状态（通过/不通过）
-     * @param response
-     * @return
-     * @throws Exception
+     * @return 操作成功的json
+
      */
     @RequestMapping("/review")
+    @ResponseBody
     public String review(
             @RequestParam(value = "ids", required = false) String ids,
-            @RequestParam(value = "state", required = false) Integer state,
-            HttpServletResponse response) throws Exception {
+            @RequestParam(value = "state", required = false) Integer state) {
 
         String[] idsStr = ids.split(",");
         JSONObject result = new JSONObject();
@@ -110,21 +106,17 @@ public class CommentAdminController {
             commentService.update(comment);
         }
         result.put("success", true);
-        ResponseUtil.write(response, result);
-        return null;
+        return result.toString();
     }
 
     /**
      *评论删除
      * @param ids 所有要删除的评论id
-     * @param response
-     * @return
-     * @throws Exception
+     * @return 操作结果josn
      */
     @RequestMapping("/deleteComment")
     public String deleteBlog(
-            @RequestParam(value = "ids", required = false) String ids,
-            HttpServletResponse response) throws Exception {
+            @RequestParam(value = "ids", required = false) String ids)  {
 
         String[] idsStr = ids.split(",");
         for (int i = 0; i < idsStr.length; i++) {
@@ -132,7 +124,6 @@ public class CommentAdminController {
         }
         JSONObject result = new JSONObject();
         result.put("success", true);
-        ResponseUtil.write(response, result);
-        return null;
+        return result.toString();
     }
 }

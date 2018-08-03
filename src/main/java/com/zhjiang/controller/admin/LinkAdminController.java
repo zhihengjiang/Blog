@@ -3,20 +3,17 @@ package com.zhjiang.controller.admin;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletResponse;
-
 import com.zhjiang.entity.Link;
 import com.zhjiang.entity.PageBean;
 import com.zhjiang.service.LinkService;
-import com.zhjiang.util.ResponseUtil;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  *关于友情链接管理页面的请求
@@ -34,19 +31,17 @@ public class LinkAdminController {
      *友情链接列表
      * @param page 页码
      * @param rows 行数
-     * @param response
      * @return
-     * @throws Exception
      */
-    @RequestMapping("/listLink")
+    @RequestMapping(value = "/listLink",produces = "application/json;charset=utf-8")
+    @ResponseBody
     public String listLink(
             @RequestParam(value = "page", required = false) String page,
-            @RequestParam(value = "rows", required = false) String rows,
-            HttpServletResponse response) throws Exception {
+            @RequestParam(value = "rows", required = false) String rows) {
 
         PageBean pageBean = new PageBean(Integer.parseInt(page),
                 Integer.parseInt(rows));
-        Map<String, Object> map = new HashMap<String, Object>();
+        Map<String, Object> map = new HashMap<>();
 
         map.put("start", pageBean.getStart());
         map.put("pageSize", pageBean.getPageSize());
@@ -57,8 +52,7 @@ public class LinkAdminController {
         JSONArray jsonArray = JSONArray.fromObject(linkList);
         result.put("rows", jsonArray);
         result.put("total", total);
-        ResponseUtil.write(response, result);
-        return null;
+        return result.toString();
     }
 
     /**
@@ -74,18 +68,17 @@ public class LinkAdminController {
     /**
      *保存添加的友情链接
      * @param link 链接数据
-     * @param response
-     * @return
-     * @throws Exception
+     * @return 操作结果的json
+
      */
     @RequestMapping("/save")
-    public String save(Link link, HttpServletResponse response)
-            throws Exception {
+    @ResponseBody
+    public String save(Link link) {
 
-        int resultTotal = 0; // ���շ��ؽ����¼��
-        if (link.getId() == null) { // ˵���ǵ�һ�β���
+        int resultTotal = 0;
+        if (link.getId() == null) {
             resultTotal = linkService.addLink(link);
-        } else { // ��id��ʾ�޸�
+        } else {
             resultTotal = linkService.updateLink(link);
         }
 
@@ -95,21 +88,18 @@ public class LinkAdminController {
         } else {
             result.put("success", false);
         }
-        ResponseUtil.write(response, result);
-        return null;
+        return result.toString();
     }
 
     /**
      *删除选中的友情链接
      * @param ids 要删除的友情链接集合，以“,"分割
-     * @param response
-     * @return
-     * @throws Exception
+     * @return 操作结果的json
      */
     @RequestMapping("/delete")
+    @ResponseBody
     public String deleteLink(
-            @RequestParam(value = "ids", required = false) String ids,
-            HttpServletResponse response) throws Exception {
+            @RequestParam(value = "ids", required = false) String ids)  {
 
         String[] idsStr = ids.split(",");
         JSONObject result = new JSONObject();
@@ -118,7 +108,6 @@ public class LinkAdminController {
             linkService.deleteLink(id);
         }
         result.put("success", true);
-        ResponseUtil.write(response, result);
-        return null;
+        return result.toString();
     }
 }
