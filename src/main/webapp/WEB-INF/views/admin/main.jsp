@@ -113,7 +113,7 @@
         <div title="首页" data-options="iconCls:'icon-home'">
             <div align="center" style="padding-top: 100px">
 
-                <font color="red" size="10"><strong>欢迎：</strong>${currentUser.username }</font></div>
+                <font  size="10"><strong>欢迎：</strong>${currentUser.username }</font></div>
         </div>
     </div>
 </div>
