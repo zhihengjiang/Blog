@@ -26,7 +26,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
- * @Description
+ * 首页请求的控制器
  * @author Thales
  *
  */
@@ -42,8 +42,8 @@ public class IndexController {
     private BlogTypeService blogTypeService;
 
     /**
-     * @Description
-     * @return
+     *首页请求
+     * @return 视图和模型
      */
     @RequestMapping("/index")
     public ModelAndView index(

@@ -25,9 +25,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
- * @Description ����Ա����Controller��
+ *  后台关于博客管理的控制器
  * @author Thales
  *
  */
@@ -42,8 +43,14 @@ public class BlogAdminController {
     @Resource
     private BlogTypeService blogTypeService;
 
+    //博客索引，用于博客检索
     private BlogIndex blogIndex = new BlogIndex();
 
+    /**
+     * 处理博客撰写的控制器方法
+     * @param model 要传递的模型，用于渲染博客撰写的视图
+     * @return 要渲染的视图名称
+     */
     @RequestMapping("/writeBlog")
     public String writeBlog(Model model){
         List<BlogType> blogTypeList = blogTypeService.getBlogTypeData();
@@ -51,17 +58,27 @@ public class BlogAdminController {
         return "/admin/writeBlog";
     }
 
+    /**
+     * 处理博客管理页面请求的控制器方法
+     * @return 要渲染的视图名称
+     */
     @RequestMapping("/blogManage")
     public String blogManage(){
 
         return "/admin/blogManage";
     }
 
+    /**
+     *保存修改或新撰写的博客
+     * @param blog 要保存的博客内容
+     * @return 要渲染的视图名称
+     * @throws Exception
+     */
     @RequestMapping("/save")
-    public String save(Blog blog, HttpServletResponse response) throws Exception {
+    @ResponseBody
+    public String save(Blog blog) throws Exception {
 
         int resultTotal = 0;
-        System.out.println("-------------------------"+blog.getContent());
         if(blog.getId() == null) {
             resultTotal = blogService.addBlog(blog);
             blogIndex.addIndex(blog);
@@ -76,17 +93,23 @@ public class BlogAdminController {
         } else {
             result.put("success", false);
         }
-        ResponseUtil.write(response, result);
-        return null;
+        return result.toString();
     }
 
 
-    @RequestMapping("/listBlog")
+    /**
+     *
+     * @param page 页码
+     * @param rows 行数
+     * @param s_blog
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "/listBlog", produces = "application/json;charset=utf-8")
     public String listBlog(
             @RequestParam(value="page", required=false)String page,
             @RequestParam(value="rows", required=false)String rows,
-            Blog s_blog,
-            HttpServletResponse response) throws Exception {
+            Blog s_blog) {
 
         PageBean pageBean = new PageBean(Integer.parseInt(page), Integer.parseInt(rows));
         Map<String, Object> map = new HashMap<>();
@@ -102,14 +125,19 @@ public class BlogAdminController {
         JSONArray jsonArray = JSONArray.fromObject(blogList, jsonConfig);
         result.put("rows", jsonArray);
         result.put("total", total);
-        ResponseUtil.write(response, result);
-        return null;
+        return result.toString();
     }
 
+    /**
+     *处理博客删除的控制器方法
+     * @param ids 要删除的博客id
+     * @return
+     * @throws Exception
+     */
+    @ResponseBody
     @RequestMapping("/delete")
     public String deleteBlog(
-            @RequestParam(value="ids", required=false)String ids,
-            HttpServletResponse response) throws Exception {
+            @RequestParam(value="ids", required=false)String ids) throws Exception {
 
         String[] idsStr = ids.split(",");
         for(int i = 0; i < idsStr.length; i++) {
@@ -120,21 +148,31 @@ public class BlogAdminController {
         }
         JSONObject result = new JSONObject();
         result.put("success", true);
-        ResponseUtil.write(response, result);
-        return null;
+
+        return result.toString();
     }
 
-    //ͨ��id��ȡ����ʵ��
-    @RequestMapping("/findById")
+    /**
+     *（暂时没用）
+     * @param id 博客id
+     * @return 博客数据
+     */
+    @ResponseBody
+    @RequestMapping(value = "/findById",produces = "application/json;charset=utf-8")
     public String findById(
-            @RequestParam(value="id", required=false)String id,
-            HttpServletResponse response) throws Exception {
+            @RequestParam(value="id", required=false)String id) {
 
         Blog blog = blogService.findById(Integer.parseInt(id));
         JSONObject result = JSONObject.fromObject(blog);
-        ResponseUtil.write(response, result);
-        return null;
+        return result.toString();
     }
+
+    /**
+     *修改博客
+     * @param id 博客id
+     * @param model 要修改的博客数据
+     * @return 修改博客页面的视图
+     */
 
     @RequestMapping("/modifyBlog")
     public String modifyBlog(@RequestParam("id") int id,Model model){

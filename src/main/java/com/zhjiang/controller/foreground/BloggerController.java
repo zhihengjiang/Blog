@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @Description Blogger Controller
+ * Blogger Controller
  * @author thales
  *
  */
@@ -37,6 +37,12 @@ public class BloggerController {
     @Resource
     private BlogService blogService;
 
+    /**
+     * 博主后台登录验证
+     * @param blogger 登录信息
+     * @param request 请求参数
+     * @return 视图名
+     */
     @RequestMapping("/login")
     public String login(Blogger blogger, HttpServletRequest request) {
 
@@ -50,6 +56,7 @@ public class BloggerController {
             return "redirect:/admin/blogger/main.html";
         } catch (AuthenticationException e) {
             e.printStackTrace();
+            //将请求返还给登录页面
             request.setAttribute("bloger", blogger);
             request.setAttribute("errorInfo", "密码错误");
             return "login";
@@ -57,6 +64,10 @@ public class BloggerController {
 
     }
 
+    /**
+     *关于博主页面
+     * @return 视图和模型
+     */
     @RequestMapping("/aboutme")
     public ModelAndView abouotMe() {
 
@@ -77,6 +88,10 @@ public class BloggerController {
         return modelAndView;
     }
 
+    /**
+     *简历页面
+     * @return 视图和模型
+     */
     @RequestMapping("/myalbum")
     public ModelAndView myAlbum() {
         ModelAndView modelAndView = new ModelAndView();
@@ -95,6 +110,10 @@ public class BloggerController {
         return modelAndView;
     }
 
+    /**
+     * 资源页面
+     * @return 视图和模型
+     */
     @RequestMapping("/resource")
     public ModelAndView resource() {
         ModelAndView modelAndView = new ModelAndView();

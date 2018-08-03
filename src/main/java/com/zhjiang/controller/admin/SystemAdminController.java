@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.support.RequestContextUtils;
 
 /**
- * @Description ����Աϵͳcontroller��
+ * 处理系统页面的控制器
  * @author Thales
  *
  */
@@ -40,7 +40,13 @@ public class SystemAdminController {
     @Resource
     private BlogService blogService;
 
-    // ˢ��ϵͳ����
+    /**
+     *
+     * @param request
+     * @param response
+     * @return
+     * @throws Exception
+     */
     @RequestMapping("/refreshSystemCache")
     public String refreshSystemCache(
             HttpServletRequest request,

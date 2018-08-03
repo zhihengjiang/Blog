@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
- * @Description
+ * 博客页面评论
  * @author Thales
  *
  */
@@ -30,6 +30,16 @@ public class CommentController {
     @Resource
     private BlogService blogService;
 
+    /**
+     * 评论提交
+     * @param comment 评论内容
+     * @param imageCode 验证码
+     * @param request 请求数据
+     * @param response 响应数据
+     * @param session 验证码数据
+     * @return
+     * @throws Exception
+     */
     @RequestMapping("/save")
     public String save(
             Comment comment,

@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
- * @Description ����Ա��������Controller��
+ *关于友情链接管理页面的请求
  * @author Thales
  *
  */
@@ -29,7 +29,15 @@ public class LinkAdminController {
 
     @Resource
     private LinkService linkService;
-    // ��ҳ��ѯ��������
+
+    /**
+     *友情链接列表
+     * @param page 页码
+     * @param rows 行数
+     * @param response
+     * @return
+     * @throws Exception
+     */
     @RequestMapping("/listLink")
     public String listLink(
             @RequestParam(value = "page", required = false) String page,
@@ -53,12 +61,23 @@ public class LinkAdminController {
         return null;
     }
 
+    /**
+     *友情链接管理
+     * @return 视图名
+     */
     @RequestMapping("/linkManage")
     public String linkManage(){
         return "/admin/linkManage";
     }
 
-    // ��Ӻ͸�����������
+
+    /**
+     *保存添加的友情链接
+     * @param link 链接数据
+     * @param response
+     * @return
+     * @throws Exception
+     */
     @RequestMapping("/save")
     public String save(Link link, HttpServletResponse response)
             throws Exception {
@@ -80,7 +99,13 @@ public class LinkAdminController {
         return null;
     }
 
-    // ����������Ϣɾ��
+    /**
+     *删除选中的友情链接
+     * @param ids 要删除的友情链接集合，以“,"分割
+     * @param response
+     * @return
+     * @throws Exception
+     */
     @RequestMapping("/delete")
     public String deleteLink(
             @RequestParam(value = "ids", required = false) String ids,

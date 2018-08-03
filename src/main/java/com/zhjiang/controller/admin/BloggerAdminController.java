@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 /**
- * @Description ����Ա����Controller�㣬��Ҫ�����֤
+ *  处理后台所有关于博主信息的请求
  * @author Thales
  *
  */
@@ -32,6 +32,11 @@ public class BloggerAdminController {
     @Resource
     private BloggerService bloggerService;
 
+    /**
+     * 处理对修改个人信息页面的请求
+     * @param model 博主信息
+     * @return 个人信息修改页面的试图名
+     */
     @RequestMapping("/modifyInfo")
     public String modifyInfo(Model model){
         Blogger blogger = bloggerService.getBloggerData();
@@ -39,7 +44,12 @@ public class BloggerAdminController {
         return "/admin/modifyInfo";
     }
 
-
+    /**
+     *
+     * @param response
+     * @return
+     * @throws Exception
+     */
     @RequestMapping("/findBlogger")
     public String findBlogger(HttpServletResponse response) throws Exception {
 
@@ -49,6 +59,14 @@ public class BloggerAdminController {
         return null;
     }
 
+    /**
+     *修改后保存信息
+     * @param imageFile 头像文件
+     * @param blogger 博主信息
+     * @param request 请求
+     * @param response
+     * @throws Exception
+     */
 
     @RequestMapping("/save")
     public void save(
@@ -57,8 +75,8 @@ public class BloggerAdminController {
             HttpServletRequest request,
             HttpServletResponse response) throws Exception {
 
-        if(!imageFile.isEmpty()) { //����û��д�����Ƭ���͸���
-            String filePath = request.getServletContext().getRealPath("/"); //��ȡ��������·��
+        if(!imageFile.isEmpty()) {
+            String filePath = request.getServletContext().getRealPath("/");
             String imageName = DateUtil.getCurrentDateStr() + "." + imageFile.getOriginalFilename().split("\\.")[1];
             imageFile.transferTo(new File(filePath + "static/userImages/" + imageName));
             blogger.setImagename(imageName);
@@ -73,7 +91,13 @@ public class BloggerAdminController {
         response.getWriter().write(result.toString());
     }
 
-
+    /**
+     *
+     * @param password 新密码
+     * @param response
+     * @return
+     * @throws Exception
+     */
     @RequestMapping("/modifyPassword")
     public String modifyPassword(
             @RequestParam("password") String password,
@@ -92,7 +116,12 @@ public class BloggerAdminController {
         return null;
     }
 
-    // �˳�
+
+    /**
+     *登出
+     * @return 登出后重定向的视图名
+     * @throws Exception
+     */
     @RequestMapping("/logout")
     public String logout() throws Exception {
 
@@ -108,8 +137,6 @@ public class BloggerAdminController {
     public String bloggerMain(){
         return "/admin/main";
     }
-
-
 
 
 }

@@ -26,7 +26,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
- * @Description 博客Controller层
+ * 前台博客展示Controller层
  * @author thales
  *
  */
@@ -47,6 +47,13 @@ public class BlogController {
     private BlogIndex blogIndex = new BlogIndex();
 
     // 请求博客详细信息
+
+    /**
+     *
+     * @param id 文章id
+     * @param request
+     * @return
+     */
     @RequestMapping("/articles/{id}")
     public ModelAndView details(@PathVariable("id") Integer id,
             HttpServletRequest request) {
@@ -101,7 +108,15 @@ public class BlogController {
         return modelAndView;
     }
 
-    // 根据关键字查询博客信息
+    /**
+     * 根据关键字查询博客信息
+     * @param q 查询参数
+     * @param page 页码
+     * @param request
+     * @return
+     * @throws Exception
+     */
+
     @RequestMapping("/search")
     public ModelAndView search(
             @RequestParam(value = "q", required = false) String q,
@@ -140,6 +155,10 @@ public class BlogController {
         return modelAndView;
     }
 
+    /**
+     * 验证码
+     * @return 视图名
+     */
     @RequestMapping("/image")
     public String verificationImage(){
         return "/foreground/blog/image";
