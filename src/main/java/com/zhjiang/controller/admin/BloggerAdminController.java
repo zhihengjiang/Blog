@@ -119,6 +119,7 @@ public class BloggerAdminController {
         return "redirect:/user/login.do";
     }
 
+
     /**
      *博客系统后台主界面
      * @return 逻辑视图名

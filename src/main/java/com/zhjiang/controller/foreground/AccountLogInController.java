@@ -7,9 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * 登录页面的控制器
  */
 @Controller
-@RequestMapping("/user")
-public class AcountLogInController {
-
+public class AccountLogInController {
     @RequestMapping("/login")
     public String userLogin(){
         return "/login";
