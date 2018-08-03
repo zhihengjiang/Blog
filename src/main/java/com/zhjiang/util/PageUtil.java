@@ -3,18 +3,16 @@ package com.zhjiang.util;
 import com.zhjiang.entity.Blog;
 
 /**
- * ��ҳ������
  * @author Administrator
  *
  */
 public class PageUtil {
 
     /**
-     * ���ɷ�ҳ����
-     * @param targetUrl Ŀ���ַ
-     * @param totalNum �ܼ�¼��
-     * @param currentPage ��ǰҳ
-     * @param pageSize ÿҳ��С
+     * @param targetUrl 目标URL
+     * @param totalNum 总数量
+     * @param currentPage 当前页码
+     * @param pageSize 每页博客数量
      * @return
      */
     public static String genPagination(
@@ -79,15 +77,12 @@ public class PageUtil {
         return pageCode.toString();
     }
 
-    //Lucence�������ͽ���ķ�ҳ
     public static String getUpAndDownPageCode (
             Integer page,
             Integer totalNum,
             String q,
             Integer pageSize,
             String projectContext) {
-
-        //������ҳ��
         long totalPage = totalNum % pageSize==0 ? totalNum/pageSize : totalNum/pageSize+1;
         StringBuffer pageCode = new StringBuffer();
         if(totalPage == 0) {

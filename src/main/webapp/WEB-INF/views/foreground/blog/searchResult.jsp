@@ -3,8 +3,7 @@
 
 <div class="data_list">
     <div class="data_list_title">
-        <img
-            src="${pageContext.request.contextPath}/static/images/search_icon.png" />&nbsp;
+        <i class="fa fa-search"></i> &nbsp;
             搜索&nbsp;<font color="red">${q }</font>&nbsp;的结果&nbsp;(共搜索到&nbsp;${resultTotal }&nbsp;条记录)
     </div>
     <div class="datas search">
@@ -17,9 +16,10 @@
                     <c:forEach items="${blogIndexList }" var="blog">
                          <li style="margin-bottom: 20px">
                               <span class="title">
+                                  <i class="fa fa-file"></i>
                                   <a href="${pageContext.request.contextPath}/blog/articles/${blog.id }.html" target="_blank">${blog.title }</a></span>
                               <span class="summary">摘要: ${blog.content }...</span>
-                              <span class="link"><a href="${pageContext.request.contextPath}/blog/articles/${blog.id }.html">${pageContext.request.contextPath}/blog/articles/${blog.id }.html</a>&nbsp;&nbsp;&nbsp;&nbsp;修改日期：${blog.releaseDateStr }</span>
+                              <span class="link"><a href="${pageContext.request.contextPath}/blog/articles/${blog.id }.html"></a>&nbsp;&nbsp;&nbsp;&nbsp;修改日期：${blog.releaseDateStr }</span>
                          </li>
                     </c:forEach>
                 </c:otherwise>

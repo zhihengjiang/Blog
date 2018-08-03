@@ -73,7 +73,7 @@
 
 <body style="margin: 1px; font-family: microsoft yahei">
 <table id="dg" title="博客管理" class="easyui-datagrid" fitColumns="true" pagination="true"
-    url="${pageContext.request.contextPath}/admin/blog/listBlog.do" toolbar="#tb">
+    url="/admin/blog/listBlog.do" toolbar="#tb">
     <thead>
         <tr>
             <th field="cb" checkbox="true" align="center"></th>

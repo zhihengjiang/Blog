@@ -1,7 +1,7 @@
 package com.zhjiang.entity;
 
 /**
- * @Description 博客类型
+ *  博客类型POJO
  * @author Thales
  *
  */

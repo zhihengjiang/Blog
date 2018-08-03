@@ -12,7 +12,6 @@ import com.zhjiang.dao.BlogTypeDao;
 import com.zhjiang.entity.BlogType;
 
 /**
- * @Description �������Serviceʵ����
  * @author Thales
  *
  */

@@ -4,15 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Description �ַ���������
+ * 字符串处理工具
  * @author 
  *
  */
 public class StringUtil {
 
     /**
-     * @Description �ж��Ƿ��ǿ�
-     * @param str
+     * @param str 字符串
      * @return
      */
     public static boolean isEmpty(String str) {
@@ -24,8 +23,7 @@ public class StringUtil {
     }
 
     /**
-     * @Description �ж��Ƿ��ǿ�
-     * @param str
+     * @param str 字符串
      * @return
      */
     public static boolean isNotEmpty(String str) {
@@ -37,8 +35,7 @@ public class StringUtil {
     }
 
     /**
-     * @Description ��ʽ��ģ����ѯ
-     * @param str
+     * @param str 字符串
      * @return
      */
     public static String formatLike(String str) {
@@ -50,8 +47,8 @@ public class StringUtil {
     }
 
     /**
-     * @Description ���˵�������Ŀո�
-     * @param list
+     * 过滤空字符串
+     * @param list 字符串列表
      * @return
      */
     public static List<String> filterWhite(List<String> list) {

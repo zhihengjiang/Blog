@@ -12,7 +12,6 @@ import com.zhjiang.entity.Comment;
 import com.zhjiang.service.CommentService;
 
 /**
- * @Description �û�����serviceʵ����
  * @author Thales
  *
  */

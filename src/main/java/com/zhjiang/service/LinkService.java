@@ -6,26 +6,22 @@ import java.util.Map;
 import com.zhjiang.entity.Link;
 
 /**
- * @Description ��������Service�ӿ�
+ *
  * @author Thales
  *
  */
 public interface LinkService {
 
-    // ��ȡ��������
-    public List<Link> getLinkData();
 
-    public List<Link> listLinkData(Map<String, Object> map);
+    List<Link> getLinkData();
 
-    // ��ȡ�ܼ�¼��
-    public Long getTotal(Map<String, Object> map);
+    List<Link> listLinkData(Map<String, Object> map);
 
-    // �����������
-    public Integer addLink(Link link);
+    Long getTotal(Map<String, Object> map);
 
-    // ������������
-    public Integer updateLink(Link link);
+    Integer addLink(Link link);
 
-    // ɾ����������
-    public Integer deleteLink(Integer id);
+    Integer updateLink(Link link);
+
+    Integer deleteLink(Integer id);
 }

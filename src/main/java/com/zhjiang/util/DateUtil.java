@@ -4,14 +4,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * @Description ���ڹ�����
  * @author Thales
  *
  */
 public class DateUtil {
 
     /**
-     * ���ڶ���ת�ַ���
      * @author Thales
      * @param date
      * @param format
@@ -27,7 +25,6 @@ public class DateUtil {
     }
 
     /**
-     * �ַ���ת���ڶ���
      * @author Thales
      * @param str
      * @param format

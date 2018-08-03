@@ -1,16 +1,16 @@
 package com.zhjiang.entity;
 
 /**
- * @Description ��������ʵ��
+ * @Description 友情链接POJO
  * @author Thales
  *
  */
 public class Link {
 
     private Integer id;
-    private String linkname; //��������
-    private String linkurl; //���ӵ�ַ
-    private Integer orderNum; //������������
+    private String linkname;
+    private String linkurl;
+    private Integer orderNum;
 
     public Integer getId() {
         return id;

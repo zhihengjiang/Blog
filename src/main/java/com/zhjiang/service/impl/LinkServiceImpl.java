@@ -12,7 +12,6 @@ import com.zhjiang.entity.Link;
 import com.zhjiang.service.LinkService;
 
 /**
- * @Description ��������Serviceʵ����
  * @author Thales
  *
  */

@@ -37,7 +37,7 @@
                    onclick="changeClass(this)">CV</a></li>
               <li><a class="navbar-brand" href="${pageContext.request.contextPath}/blogger/resource.html"
                    onclick="changeClass(this)">工具</a></li>
-              <li><a class="navbar-brand" href="${pageContext.request.contextPath}/user/login.do" target="blank"><i
+              <li><a class="navbar-brand" href="${pageContext.request.contextPath}/admin/blogger/main.do" target="blank"><i
                       class="fa fa-user-alt"></i>
               </a></li>
           </ul>

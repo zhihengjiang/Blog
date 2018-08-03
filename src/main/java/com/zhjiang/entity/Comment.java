@@ -3,18 +3,18 @@ package com.zhjiang.entity;
 import java.util.Date;
 
 /**
- * @Description ����ʵ��
+ * 评论
  * @author Thales
  *
  */
 public class Comment {
 
     private Integer id;
-    private String userIp; //�����û���ip
-    private String content; //��������
-    private Date commentDate; //��������
-    private Integer state; //���״̬��0����� 1���ͨ�� 2δͨ��
-    private Blog blog; //�����Ĳ���
+    private String userIp;
+    private String content;
+    private Date commentDate;
+    private Integer state;
+    private Blog blog;
 
     public Integer getId() {
         return id;

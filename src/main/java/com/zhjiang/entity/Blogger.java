@@ -2,19 +2,19 @@ package com.zhjiang.entity;
 
 
 /**
- * @Description ����ʵ��
+ * 博主POJOs
  * @author Thales
  *
  */
 public class Blogger {
 
     private Integer id;
-    private String username; //����
-    private String password; //����
-    private String profile; //������Ϣ
-    private String nickname; //�����ǳ�
-    private String sign; //����ǩ��
-    private String imagename; //ͷ��·��
+    private String username;
+    private String password;
+    private String profile;
+    private String nickname;
+    private String sign;
+    private String imagename;
 
 
     public Integer getId() {

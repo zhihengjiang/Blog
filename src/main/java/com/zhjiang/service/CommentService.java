@@ -6,7 +6,7 @@ import java.util.Map;
 import com.zhjiang.entity.Comment;
 
 /**
- * @Description �û�����service�ӿ�
+ *
  * @author Thales
  *
  */

@@ -14,7 +14,7 @@ import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 
 /**
- * @Description �Զ���realm
+ * 认证
  * @author Thales
  *
  */
@@ -24,25 +24,24 @@ public class MyRealm extends AuthorizingRealm {
     private BloggerService bloggerService;
 
     /**
-     * Ϊ��ǰ��½���û������ɫ��Ȩ��
+     * Ϊ
      */
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(
             PrincipalCollection principals) {
-        // ������˲�����Ŀ��û����һ��ģ���Ϊ��һ���û�
         return null;
     }
 
     /**
-     * ��ǰ��½���û����������֤
+     *
      */
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(
             AuthenticationToken token) throws AuthenticationException {
 
-        String username = (String) token.getPrincipal(); // ��ȡ�û���
+        String username = (String) token.getPrincipal();
         System.out.println("密码:" + token.getCredentials());
-        Blogger blogger = bloggerService.getByUsername(username); // �����û��������ݿ��в�ѯ��������Ϣ
+        Blogger blogger = bloggerService.getByUsername(username);
 
         System.out.println(blogger.getUsername()+":"+blogger.getPassword());
 

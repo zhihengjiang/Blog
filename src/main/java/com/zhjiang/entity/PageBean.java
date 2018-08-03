@@ -1,15 +1,11 @@
 package com.zhjiang.entity;
 
-/**
- * ��ҳModel��
- * @author 
- *
- */
+
 public class PageBean {
 
-    private int page; // �ڼ�ҳ
-    private int pageSize; // ÿҳ��¼��
-    private int start;  // ��ʼҳ
+    private int page; //页码
+    private int pageSize; //每页大小
+    private int start; //开始index
 
 
     public PageBean(int page, int pageSize) {
