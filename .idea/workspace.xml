@@ -7,10 +7,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68a3d9dd-8da9-46de-be0c-185e8a643b88" name="Default" comment="修改myibatis的mapper">
+    <list default="true" id="68a3d9dd-8da9-46de-be0c-185e8a643b88" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhjiang/listener/InitBloggerData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -73,7 +71,7 @@
       <file leaf-file-name="web.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
+            <state relative-caret-position="-519">
               <caret line="20" column="17" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="20" selection-end-column="17" />
             </state>
           </provider>
@@ -722,7 +720,7 @@
       <workItem from="1533209175307" duration="4706000" />
       <workItem from="1533215117510" duration="8222000" />
       <workItem from="1533299419014" duration="9918000" />
-      <workItem from="1533357719399" duration="851000" />
+      <workItem from="1533357719399" duration="1468000" />
     </task>
     <task id="LOCAL-00001" summary="已完成博客系统所有功能的开发">
       <created>1533212034309</created>
@@ -794,11 +792,18 @@
       <option name="project" value="LOCAL" />
       <updated>1533358382905</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="去除一个自定义的监听器">
+      <created>1533358791190</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1533358791190</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37207000" />
+    <option name="totallyTimeSpent" value="37644000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -870,7 +875,8 @@
     <MESSAGE value="修改字体颜色" />
     <MESSAGE value="修改mapper层注释" />
     <MESSAGE value="修改myibatis的mapper" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改myibatis的mapper" />
+    <MESSAGE value="去除一个自定义的监听器" />
+    <option name="LAST_COMMIT_MESSAGE" value="去除一个自定义的监听器" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/linkManage.jsp">
@@ -1209,7 +1215,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
+        <state relative-caret-position="-519">
           <caret line="20" column="17" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="20" selection-end-column="17" />
         </state>
       </provider>
