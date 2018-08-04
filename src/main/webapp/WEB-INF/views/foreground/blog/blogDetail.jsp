@@ -10,7 +10,7 @@
     }
 
     function loadimage(){
-        document.getElementById("randImage").src="/blog/image.do?"+Math.random();
+        document.getElementById("randImage").src="${pageContext.request.contextPath}/blog/image.do?"+Math.random();
     }
 
     function submitData() {
@@ -139,7 +139,7 @@
             验证码：<input type="text" value="" name="imageCode" id="imageCode"
                 size="10" onkeydown="if(event.keyCode==13)form1.submit()" />&nbsp;
                 <img onclick="loadimage();" title="换一张试试" name="randImage"
-                     id="randImage" src="/blog/image.do" width="60" height="20" border="1"
+                     id="randImage" src="${pageContext.request.contextPath}/blog/image.do" width="60" height="20" border="1"
                      align="absmiddle">
         </div>
         <div class="publishButton">
