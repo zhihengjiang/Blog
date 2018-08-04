@@ -7,7 +7,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
-import com.zhjiang.dao.LinkDao;
+import com.zhjiang.mapper.LinkMapper;
 import com.zhjiang.entity.Link;
 import com.zhjiang.service.LinkService;
 
@@ -19,30 +19,30 @@ import com.zhjiang.service.LinkService;
 public class LinkServiceImpl implements LinkService {
 
     @Resource
-    private LinkDao linkDao;
+    private LinkMapper linkMapper;
 
     public List<Link> getLinkData() {
-        return linkDao.getLinkData();
+        return linkMapper.getLinkData();
     }
 
     public List<Link> listLinkData(Map<String, Object> map) {
-        return linkDao.listLinkData(map);
+        return linkMapper.listLinkData(map);
     }
 
     public Long getTotal(Map<String, Object> map) {
-        return linkDao.getTotal(map);
+        return linkMapper.getTotal(map);
     }
 
     public Integer addLink(Link link) {
-        return linkDao.addLink(link);
+        return linkMapper.addLink(link);
     }
 
     public Integer updateLink(Link link) {
-        return linkDao.updateLink(link);
+        return linkMapper.updateLink(link);
     }
 
     public Integer deleteLink(Integer id) {
-        return linkDao.deleteLink(id);
+        return linkMapper.deleteLink(id);
     }
 
 }

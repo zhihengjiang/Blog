@@ -4,7 +4,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
-import com.zhjiang.dao.BloggerDao;
+import com.zhjiang.mapper.BloggerMapper;
 import com.zhjiang.entity.Blogger;
 import com.zhjiang.service.BloggerService;
 
@@ -16,18 +16,18 @@ import com.zhjiang.service.BloggerService;
 public class BloggerServiceImpl implements BloggerService {
 
     @Resource
-    private BloggerDao bloggerDao;
+    private BloggerMapper bloggerMapper;
 
     public Blogger getByUsername(String username) {
-        return bloggerDao.getByUsername(username);
+        return bloggerMapper.getByUsername(username);
     }
 
     public Blogger getBloggerData() {
-        return bloggerDao.getBloggerData();
+        return bloggerMapper.getBloggerData();
     }
 
     public Integer updateBlogger(Blogger blogger) {
-        return bloggerDao.updateBlogger(blogger);
+        return bloggerMapper.updateBlogger(blogger);
     }
 
 }

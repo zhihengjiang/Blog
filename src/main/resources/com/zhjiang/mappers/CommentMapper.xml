@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.zhjiang.dao.CommentDao">
+<mapper namespace="com.zhjiang.mapper.CommentMapper">
 
     <resultMap type="Comment" id="CommentResult">
         <id property="id" column="id"/>
@@ -10,7 +10,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         <result property="content" column="content"/>
         <result property="commentDate" column="commentDate"/>
         <result property="state" column="state"/>
-        <association property="blog" column="blog_id" select="com.zhjiang.dao.BlogDao.findById">
+        <association property="blog" column="blog_id" select="com.zhjiang.mapper.BlogMapper.findById">
         </association>
     </resultMap>
 

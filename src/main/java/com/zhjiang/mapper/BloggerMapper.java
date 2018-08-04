@@ -1,4 +1,4 @@
-    package com.zhjiang.dao;
+    package com.zhjiang.mapper;
 
 import com.zhjiang.entity.Blogger;
 
@@ -6,7 +6,7 @@ import com.zhjiang.entity.Blogger;
  * @author Thales
  *
  */
-public interface BloggerDao {
+public interface BloggerMapper {
 
     public Blogger getByUsername(String username);
 

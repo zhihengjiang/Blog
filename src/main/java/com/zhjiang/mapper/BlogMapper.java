@@ -1,4 +1,4 @@
-package com.zhjiang.dao;
+package com.zhjiang.mapper;
 
 import java.util.List;
 import java.util.Map;
@@ -6,11 +6,10 @@ import java.util.Map;
 import com.zhjiang.entity.Blog;
 
 /**
- * @Description
  * @author Thales
  *
  */
-public interface BlogDao {
+public interface BlogMapper {
 
     List<Map<String,Object>> getBlogData();
 

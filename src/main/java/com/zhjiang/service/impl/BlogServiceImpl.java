@@ -7,7 +7,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
-import com.zhjiang.dao.BlogDao;
+import com.zhjiang.mapper.BlogMapper;
 import com.zhjiang.entity.Blog;
 import com.zhjiang.service.BlogService;
 
@@ -19,47 +19,47 @@ import com.zhjiang.service.BlogService;
 public class BlogServiceImpl implements BlogService {
 
     @Resource
-    private BlogDao blogDao;
+    private BlogMapper blogMapper;
 
     public List<Map<String,Object>> getBlogData() {
 
-        return blogDao.getBlogData();
+        return blogMapper.getBlogData();
     }
 
     public List<Blog> listBlog(Map<String, Object> map) {
-        return blogDao.listBlog(map);
+        return blogMapper.listBlog(map);
     }
 
     public Long getTotal(Map<String, Object> map) {
-        return blogDao.getTotal(map);
+        return blogMapper.getTotal(map);
     }
 
     public Blog findById(Integer id) {
-        return blogDao.findById(id);
+        return blogMapper.findById(id);
     }
 
     public Integer update(Blog blog) {
-        return blogDao.update(blog);
+        return blogMapper.update(blog);
     }
 
     public Blog getPrevBlog(Integer id) {
-        return blogDao.getPrevBlog(id);
+        return blogMapper.getPrevBlog(id);
     }
 
     public Blog getNextBlog(Integer id) {
-        return blogDao.getNextBlog(id);
+        return blogMapper.getNextBlog(id);
     }
 
     public Integer addBlog(Blog blog) {
-        return blogDao.addBlog(blog);
+        return blogMapper.addBlog(blog);
     }
 
     public Integer deleteBlog(Integer id) {
-        return blogDao.deleteBlog(id);
+        return blogMapper.deleteBlog(id);
     }
 
     public Integer getBlogByTypeId(Integer typeId) {
-        return blogDao.getBlogByTypeId(typeId);
+        return blogMapper.getBlogByTypeId(typeId);
     }
 
 }

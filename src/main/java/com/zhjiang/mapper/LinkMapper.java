@@ -1,4 +1,4 @@
-package com.zhjiang.dao;
+package com.zhjiang.mapper;
 
 import java.util.List;
 import java.util.Map;
@@ -9,7 +9,7 @@ import com.zhjiang.entity.Link;
  * @author Thales
  *
  */
-public interface LinkDao {
+public interface LinkMapper {
 
     List<Link> getLinkData();
 

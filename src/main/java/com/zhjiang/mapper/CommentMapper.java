@@ -1,4 +1,4 @@
-package com.zhjiang.dao;
+package com.zhjiang.mapper;
 
 import java.util.List;
 import java.util.Map;
@@ -9,7 +9,7 @@ import com.zhjiang.entity.Comment;
  * @author Thales
  *
  */
-public interface CommentDao {
+public interface CommentMapper {
 
     public List<Comment> getCommentData(Map<String, Object> map);
 

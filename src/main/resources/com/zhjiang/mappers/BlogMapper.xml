@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.zhjiang.dao.BlogDao">
+<mapper namespace="com.zhjiang.mapper.BlogMapper">
 
     <resultMap type="Blog" id="BlogResult">
         <id property="id" column="id"/>
@@ -14,7 +14,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         <result property="content" column="content"/>
         <result property="contentNoTag" column="contentNoTag"/>
         <result property="keyWord" column="keyWord"/>
-        <association property="blogType" column="type_id" select="com.zhjiang.dao.BlogTypeDao.findById">
+        <association property="blogType" column="type_id" select="com.zhjiang.mapper.BlogTypeMapper.findById">
         </association>
     </resultMap>
 

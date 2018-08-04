@@ -36,7 +36,7 @@
 
     <!-- 扫描mapper接口（即dao），Spring会自动查找其下的类 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.zhjiang.dao" />
+        <property name="basePackage" value="com.zhjiang.mapper" />
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
 

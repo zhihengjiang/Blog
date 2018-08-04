@@ -7,7 +7,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
-import com.zhjiang.dao.CommentDao;
+import com.zhjiang.mapper.CommentMapper;
 import com.zhjiang.entity.Comment;
 import com.zhjiang.service.CommentService;
 
@@ -19,30 +19,30 @@ import com.zhjiang.service.CommentService;
 public class CommentServiceImpl implements CommentService {
 
     @Resource
-    private CommentDao commentDao;
+    private CommentMapper commentMapper;
 
     public List<Comment> getCommentData(Map<String, Object> map) {
-        return commentDao.getCommentData(map);
+        return commentMapper.getCommentData(map);
     }
 
     public int addComment(Comment comment) {
-        return commentDao.addComment(comment);
+        return commentMapper.addComment(comment);
     }
 
     public Long getTotal(Map<String, Object> map) {
-        return commentDao.getTotal(map);
+        return commentMapper.getTotal(map);
     }
 
     public Integer update(Comment comment) {
-        return commentDao.update(comment);
+        return commentMapper.update(comment);
     }
 
     public Integer deleteComment(Integer id) {
-        return commentDao.deleteComment(id);
+        return commentMapper.deleteComment(id);
     }
 
     public Integer deleteCommentByBlogId(Integer blogId) {
-        return commentDao.deleteCommentByBlogId(blogId);
+        return commentMapper.deleteCommentByBlogId(blogId);
     }
 
 }

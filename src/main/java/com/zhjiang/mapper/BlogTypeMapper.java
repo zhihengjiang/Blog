@@ -1,4 +1,4 @@
-package com.zhjiang.dao;
+package com.zhjiang.mapper;
 
 import java.util.List;
 import java.util.Map;
@@ -9,7 +9,7 @@ import com.zhjiang.entity.BlogType;
  * @author Thales
  *
  */
-public interface BlogTypeDao {
+public interface BlogTypeMapper {
 
     public List<BlogType> getBlogTypeData();
 
