@@ -15,10 +15,10 @@
     <param-value>classpath:applicationContext.xml</param-value>
   </context-param>
   
-  <!-- 添加获取博主信息的监听器 -->
-  <listener>
-    <listener-class>com.zhjiang.listener.InitBloggerData</listener-class>
-  </listener>
+  <!--&lt;!&ndash; 添加获取博主信息的监听器 &ndash;&gt;-->
+  <!--<listener>-->
+    <!--<listener-class>com.zhjiang.listener.InitBloggerData</listener-class>-->
+  <!--</listener>-->
   
   <!-- 添加springmvc支持 -->
   <servlet>
