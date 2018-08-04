@@ -39,8 +39,7 @@
 
 <div class="data_list">
     <div class="data_list_title">
-        <img
-            src="${pageContext.request.contextPath}/static/images/blog_show_icon.png" />&nbsp;博客信息
+        <i class="fa fa-th-list"></i> &nbsp;博客信息
     </div>
     <div>
         <div class="blog_title">
@@ -83,8 +82,7 @@
 
 <div class="data_list">
     <div class="data_list_title">
-        <img
-            src="${pageContext.request.contextPath}/static/images/comment_icon.png" />&nbsp;用户评论
+        <i class="fa fa-comment-dots"></i> &nbsp;用户评论
         <c:if test="${commentList.size()>10 }">
             <a href="javascript:showOtherComment()"
                 style="float:right; padding-right:40px;">显示所有用户评论</a>
@@ -127,8 +125,7 @@
 
 <div class="data_list">
     <div class="data_list_title">
-        <img
-            src="${pageContext.request.contextPath}/static/images/publish_comment_icon.png" />&nbsp;发表评论
+        <i class="fa fa-comments"></i> &nbsp;发表评论
     </div>
     <div class="publish_comment">
         <div>
