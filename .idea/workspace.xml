@@ -7,11 +7,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68a3d9dd-8da9-46de-be0c-185e8a643b88" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_json_lib_json_lib_jdk18_2_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="68a3d9dd-8da9-46de-be0c-185e8a643b88" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,8 +43,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="294">
-                <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+              <first_editor relative-caret-position="330">
+                <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
               </first_editor>
               <second_editor />
             </state>
@@ -707,7 +703,7 @@
       <workItem from="1533215117510" duration="8222000" />
       <workItem from="1533299419014" duration="9918000" />
       <workItem from="1533357719399" duration="3039000" />
-      <workItem from="1533389303688" duration="4954000" />
+      <workItem from="1533389303688" duration="5204000" />
     </task>
     <task id="LOCAL-00001" summary="已完成博客系统所有功能的开发">
       <created>1533212034309</created>
@@ -821,11 +817,32 @@
       <option name="project" value="LOCAL" />
       <updated>1533392130091</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="修改README文件">
+      <created>1533394289602</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1533394289602</updated>
+    </task>
+    <task id="LOCAL-00018" summary="修改README文件">
+      <created>1533394431726</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1533394431726</updated>
+    </task>
+    <task id="LOCAL-00019" summary="修改README文件">
+      <created>1533394494006</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1533394494006</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44169000" />
+    <option name="totallyTimeSpent" value="44419000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -901,7 +918,8 @@
     <MESSAGE value="更新md文件" />
     <MESSAGE value="修复验证码不能显示的问题" />
     <MESSAGE value="优化图标" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化图标" />
+    <MESSAGE value="修改README文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改README文件" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zhjiang/lucene/BlogIndex.java">
@@ -1248,8 +1266,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="294">
-            <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+          <first_editor relative-caret-position="330">
+            <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
           </first_editor>
           <second_editor />
         </state>

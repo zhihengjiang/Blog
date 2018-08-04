@@ -12,7 +12,7 @@
 - 使用[editormd](https://pandao.github.io/editor.md/)作为编辑器，实现博客内容的编辑。
 - 使用[Font Awesome](https://fontawesome.com)字体图标
   
-  ## 博客网站[Demo](htttp://zhihengjiang.com)
+  ## 博客网站[Demo](http://zhihengjiang.com)
   
   ## ToDo列表
 - [ ] 将视图模板从JSP改为Thymeleaf
