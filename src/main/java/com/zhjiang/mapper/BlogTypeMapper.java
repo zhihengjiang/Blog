@@ -11,18 +11,18 @@ import com.zhjiang.entity.BlogType;
  */
 public interface BlogTypeMapper {
 
-    public List<BlogType> getBlogTypeData();
+    List<BlogType> getBlogTypeData();
 
-    public BlogType findById(Integer id);
+    BlogType findById(Integer id);
 
-    public List<BlogType> listBlogType(Map<String, Object> map);
+    List<BlogType> listBlogType(Map<String, Object> map);
 
-    public Long getTotal(Map<String, Object> map);
+    Long getTotal(Map<String, Object> map);
 
-    public Integer addBlogType(BlogType blogType);
+    Integer addBlogType(BlogType blogType);
 
-    public Integer updateBlogType(BlogType blogType);
+    Integer updateBlogType(BlogType blogType);
 
-    public Integer deleteBlogType(Integer id);
+    Integer deleteBlogType(Integer id);
 
 }

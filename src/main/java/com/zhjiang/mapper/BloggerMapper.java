@@ -8,9 +8,9 @@ import com.zhjiang.entity.Blogger;
  */
 public interface BloggerMapper {
 
-    public Blogger getByUsername(String username);
+    Blogger getByUsername(String username);
 
-    public Blogger getBloggerData();
+    Blogger getBloggerData();
 
-    public Integer updateBlogger(Blogger blogger);
+    Integer updateBlogger(Blogger blogger);
 }
