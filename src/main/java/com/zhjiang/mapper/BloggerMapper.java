@@ -1,4 +1,4 @@
-    package com.zhjiang.mapper;
+package com.zhjiang.mapper;
 
 import com.zhjiang.entity.Blogger;
 
