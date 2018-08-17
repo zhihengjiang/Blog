@@ -8,17 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68a3d9dd-8da9-46de-be0c-185e8a643b88" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_0_7_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/zhjiang/BaseJUnitTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/zhjiang/controller/admin/CommentControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Blog.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/fontawesome5.2.0/metadata/icons.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/fontawesome5.2.0/metadata/icons.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,7 +49,7 @@
       <file leaf-file-name="blogDetail.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foreground/blog/blogDetail.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
+            <state relative-caret-position="15">
               <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
@@ -72,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommentController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CommentController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zhjiang/controller/foreground/CommentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5">
-              <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+            <state relative-caret-position="274">
+              <caret line="58" selection-start-line="58" selection-end-line="58" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -84,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommentControllerTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CommentControllerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/zhjiang/controller/admin/CommentControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+            <state relative-caret-position="329">
+              <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -796,7 +788,7 @@
       <workItem from="1533780884822" duration="3638000" />
       <workItem from="1533806102550" duration="1322000" />
       <workItem from="1534481184910" duration="4062000" />
-      <workItem from="1534489260366" duration="2616000" />
+      <workItem from="1534489260366" duration="2909000" />
     </task>
     <task id="LOCAL-00001" summary="已完成博客系统所有功能的开发">
       <created>1533212034309</created>
@@ -980,13 +972,17 @@
       <option name="project" value="LOCAL" />
       <updated>1534489001940</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="测试CommentController">
+      <created>1534492167303</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1534492167303</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CommentControllerTest_testSaveComment - 2018.08.17 at 15h 27m 49s.xml">
-      <configuration name="CommentControllerTest.testSaveComment" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CommentControllerTest_testSaveComment - 2018.08.17 at 15h 30m 30s.xml">
       <configuration name="CommentControllerTest.testSaveComment" configurationId="JUnit" />
     </history-entry>
@@ -1008,9 +1004,18 @@
     <history-entry file="CommentControllerTest - 2018.08.17 at 15h 37m 41s.xml">
       <configuration name="CommentControllerTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="CommentControllerTest - 2018.08.17 at 15h 44m 41s.xml">
+      <configuration name="CommentControllerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CommentControllerTest - 2018.08.17 at 15h 46m 21s.xml">
+      <configuration name="CommentControllerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CommentControllerTest - 2018.08.17 at 15h 47m 01s.xml">
+      <configuration name="CommentControllerTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71145000" />
+    <option name="totallyTimeSpent" value="71438000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1092,7 +1097,8 @@
     <MESSAGE value="修复使用Nginx反向代理后不能得到访问者真实ip的问题" />
     <MESSAGE value="更改spring版本至5.0.7" />
     <MESSAGE value="增加Spring Test支持" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加Spring Test支持" />
+    <MESSAGE value="测试CommentController" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试CommentController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1384,20 +1390,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foreground/blog/blogDetail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhjiang/service/impl/BloggerServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zhjiang/util/DateUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1446,20 +1438,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhjiang/controller/foreground/CommentController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhjiang/service/impl/BloggerServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5">
-          <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        <state relative-caret-position="120">
+          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foreground/blog/blogDetail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/zhjiang/controller/admin/CommentControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/zhjiang/controller/admin/CommentControllerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhjiang/controller/foreground/CommentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+        <state relative-caret-position="274">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
