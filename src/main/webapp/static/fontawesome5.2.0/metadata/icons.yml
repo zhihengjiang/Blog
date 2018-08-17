@@ -5105,7 +5105,7 @@ gamepad:
   label: Gamepad
   search:
     terms:
-      - controller
+      - com.zhjiang.admin.controller
   styles:
     - solid
   unicode: f11b
