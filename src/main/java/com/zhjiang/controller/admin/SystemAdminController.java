@@ -49,7 +49,7 @@ public class SystemAdminController {
     public String refreshSystemCache(
             HttpServletRequest request)  {
 
-        ServletContext application = RequestContextUtils.getWebApplicationContext(request).getServletContext();
+        ServletContext application = RequestContextUtils.findWebApplicationContext(request).getServletContext();
 
 
         Blogger blogger = bloggerService.getBloggerData();
