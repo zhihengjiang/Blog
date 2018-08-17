@@ -2,15 +2,14 @@ package com.zhjiang.controller.foreground;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.zhjiang.entity.Blog;
 import com.zhjiang.entity.Comment;
 import com.zhjiang.service.BlogService;
 import com.zhjiang.service.CommentService;
+import com.zhjiang.util.IPUtil;
 import net.sf.json.JSONObject;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -35,10 +34,8 @@ public class CommentController {
      * @param comment 评论内容
      * @param imageCode 验证码
      * @param request 请求数据
-     * @param response 响应数据
      * @param session 验证码数据
-     * @return
-     * @throws Exception
+     * @return 提交结果json
      */
     @RequestMapping(value = "/save",produces = "application/json;charset=utf-8")
     @ResponseBody
@@ -46,8 +43,7 @@ public class CommentController {
             Comment comment,
             @RequestParam("imageCode")String imageCode,
             HttpServletRequest request,
-            HttpServletResponse response,
-            HttpSession session) throws Exception {
+            HttpSession session) {
 
         String sRand = (String) session.getAttribute("sRand");
         JSONObject result = new JSONObject();
@@ -56,7 +52,7 @@ public class CommentController {
             result.put("success", false);
             result.put("errorInfo", "验证码错误！");
         } else {
-            String userIp = request.getRemoteAddr();
+            String userIp = IPUtil.getIpAddress(request);
             comment.setUserIp(userIp);
             if(comment.getId() == null) {
                 resultTotal = commentService.addComment(comment);
