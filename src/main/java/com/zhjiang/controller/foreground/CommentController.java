@@ -51,11 +51,13 @@ public class CommentController {
         if(!imageCode.equals(sRand)) {
             result.put("success", false);
             result.put("errorInfo", "验证码错误！");
+            System.out.println(imageCode);
         } else {
             String userIp = IPUtil.getIpAddress(request);
             comment.setUserIp(userIp);
             if(comment.getId() == null) {
                 resultTotal = commentService.addComment(comment);
+                System.out.println(userIp);
                 Blog blog = blogService.findById(comment.getBlog().getId());
                 blog.setReplyHit(blog.getReplyHit() + 1);
                 blogService.update(blog);
