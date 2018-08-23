@@ -17,12 +17,13 @@
 
     <!-- 自动扫描包中的bean -->
     <context:component-scan base-package="com.zhjiang.*" />
+    <context:property-placeholder location="classpath:application.properties"/>
 
     <!-- 配置数据源，使用阿里巴巴连接池Druid -->
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
-        <property name="url" value="jdbc:mysql://localhost:3306/db_blog?characterEncoding=utf-8"/>
-        <property name="username" value="root"/>
-        <property name="password" value="jzh"/>
+        <property name="url" value="${jdbc,url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
     </bean>
 
     <!-- 配置mybatis的sqlSessionFactory -->

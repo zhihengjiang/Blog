@@ -40,7 +40,7 @@ public class CommentControllerTest extends BaseJUnitTest {
         ((MockHttpServletRequestBuilder) request).param("blog.id","14");
         ((MockHttpServletRequestBuilder) request).param("imageCode","1234");
         ((MockHttpServletRequestBuilder) request).sessionAttr("sRand","1234");
-        ((MockHttpServletRequestBuilder) request).header("x-forwarded-for","104.128.06.49");
+        ((MockHttpServletRequestBuilder) request).header("x-forwarded-for","104.128.06.49,114.114.114.114");
 
         MvcResult result = mockMvc.perform(request).andReturn();
         System.out.println(result.getResponse().getContentAsString());
