@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>ssm博客系统</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/fontawesome5.2.0/css/all.min.css">
 <script
     src="${pageContext.request.contextPath}/static/bootstrap3/js/jquery-1.11.2.min.js"></script>
 <STYLE>
@@ -215,11 +216,12 @@ a {
             </DIV>
             <P style="padding: 30px 0px 10px; position: relative;">
                 <SPAN class="u_logo"></SPAN>
+                <%--<i class="fa fa-user-alt"></i>--%>
                 <INPUT id="username" name="username" class="ipt" type="text"
                     placeholder="请输入用户名" value="${blogger.username }">
             </P>
             <P style="position: relative;">
-                <SPAN class="p_logo"></SPAN>
+                <SPAN class="p_logo"> </SPAN>
                 <INPUT id="password" name="password" class="ipt" type="password"
                     placeholder="请输入密码" value="${blogger.password }">
             </P>

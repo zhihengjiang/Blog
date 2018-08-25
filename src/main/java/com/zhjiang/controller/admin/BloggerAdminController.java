@@ -116,7 +116,7 @@ public class BloggerAdminController {
     public String logout() {
 
         SecurityUtils.getSubject().logout();
-        return "redirect:/user/login.do";
+        return "redirect:/login.do";
     }
 
 
