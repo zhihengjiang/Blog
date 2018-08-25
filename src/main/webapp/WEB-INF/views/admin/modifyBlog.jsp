@@ -83,9 +83,14 @@
                     height  : 640,
                     codeFold : true,
                     syncScrolling : "single",
-                    //你的lib目录的路径
+                    theme   :   "default",
+                    previewTheme :  "dark",
+                    editorTheme  :  "monokai",
+                //你的lib目录的路径
                     path    : "<%=request.getContextPath()%>/static/editormd/lib/",
                     imageUpload: false,//关闭图片上传功能
+                    imageFormats   : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+                    imageUploadURL :    "${pageContext.request.contextPath}/admin/blog/imageUpload.do",
                     emoji: false,
                     taskList: true,
                     tocm: true,         // Using [TOCM]
@@ -94,6 +99,7 @@
                     sequenceDiagram: true,       // 开启时序/序列图支持，默认关闭,
                     saveHTMLToTextarea : true
                 });
+
             html = testEditor.getHTML();
 
 

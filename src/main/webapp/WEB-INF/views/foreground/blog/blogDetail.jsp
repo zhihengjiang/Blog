@@ -2,6 +2,26 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
+<link href="${pageContext.request.contextPath}/static/editormd/css/editormd.preview.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript"
+        src="${pageContext.request.contextPath}/static/editormd/examples/js/jquery.min.js"></script>
+<script type="text/javascript" charset="utf-8"
+        src="${pageContext.request.contextPath}/static/editormd/lib/marked.min.js"></script>
+<script type="text/javascript" charset="utf-8"
+        src="${pageContext.request.contextPath}/static/editormd/lib/prettify.min.js"></script>
+<script type="text/javascript" charset="utf-8"
+        src="${pageContext.request.contextPath}/static/editormd/lib/raphael.min.js"></script>
+<script type="text/javascript" charset="utf-8"
+        src="${pageContext.request.contextPath}/static/editormd/lib/underscore.min.js"></script>
+<script type="text/javascript" charset="utf-8"
+        src="${pageContext.request.contextPath}/static/editormd/lib/sequence-diagram.min.js"></script>
+<script type="text/javascript" charset="utf-8"
+        src="${pageContext.request.contextPath}/static/editormd/lib/flowchart.min.js"></script>
+<script type="text/javascript" charset="utf-8"
+        src="${pageContext.request.contextPath}/static/editormd/lib/jquery.flowchart.min.js"></script>
+<script type="text/javascript" charset="utf-8"
+        src="${pageContext.request.contextPath}/static/editormd/editormd.min.js"></script>
+
 
 <script type="text/javascript">
 
@@ -34,6 +54,30 @@
                 },"json");
         }
     }
+
+    var testEditor;
+    $(function () {
+        testEditor= editormd.markdownToHTML("test-editormd-view", {
+            //htmlDecode      : true,       // 开启 HTML 标签解析，为了安全性，默认不开启
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            //toc             : false,
+            tocm            : true,    // Using [TOCM]
+            //tocContainer    : "#custom-toc-container", // 自定义 ToC 容器层
+            //gfm             : false,
+            //tocDropdown     : true,
+            // markdownSourceCode : true, // 是否保留 Markdown 源码，即是否删除保存源码的 Textarea 标签
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+            theme   :   "dark",
+            previewTheme :  "dark",
+            editorTheme  :  "monokai",
+            //你的lib目录的路径
+
+        });
+    });
 
 </script>
 
@@ -68,7 +112,11 @@
             <font style="color:#8B2323">作者：Thales&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;尊重博主原创文章，转载请注明文章出于此处。</font>
         </div>
         <div class="xian" style="margin:0px auto; border-top:1px solid #ddd"></div>
-        <div class="blog_content">${blog.content }</div>
+        <div class="blog_content">
+            <div id="test-editormd-view">
+                <textarea style="display:none;" name="test-editormd-view">${blog.contentNoTag }</textarea>
+            </div>
+            </div>
         <div class="xian" style="margin:0 auto; border-top:1px solid #ddd"></div>
         <br>
         <div style="float:right;">发布于：『<fmt:formatDate value="${blog.releaseDate }" type="date" pattern="yyyy-MM-dd HH:mm" />』

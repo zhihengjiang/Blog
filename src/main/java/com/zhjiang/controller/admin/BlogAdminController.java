@@ -1,10 +1,14 @@
 package com.zhjiang.controller.admin;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 
 import com.zhjiang.entity.Blog;
 import com.zhjiang.entity.BlogType;
@@ -14,16 +18,19 @@ import com.zhjiang.service.BlogService;
 import com.zhjiang.service.BlogTypeService;
 import com.zhjiang.service.CommentService;
 import com.zhjiang.util.DateJsonValueProcessor;
+import com.zhjiang.util.DateUtil;
 import com.zhjiang.util.StringUtil;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import net.sf.json.JsonConfig;
 
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
 /**
  *  后台关于博客管理的控制器
@@ -179,5 +186,42 @@ public class BlogAdminController {
         List<BlogType> blogTypeList = blogTypeService.getBlogTypeData();
         model.addAttribute("blogTypeList",blogTypeList);
         return "/admin/modifyBlog";
+    }
+
+    @RequestMapping(value = "/imageUpload",produces = "application/json;charset=utf-8")
+    @ResponseBody
+    public String imageUpload(@RequestParam("editormd-image-file") MultipartFile imageFile, HttpServletRequest
+            request) {
+        JSONObject result = new JSONObject();
+        if(!imageFile.isEmpty()){
+            String rootPath = request.getServletContext().getRealPath("/");
+            String currentData = DateUtil.formatDate(new Date(),"yyyyMM");
+            String folderName = "/static/images/" + currentData;
+            File fileFolder = new File(rootPath + folderName);
+            if(!fileFolder.exists()) {
+                System.out.println(1);
+                if (!fileFolder.mkdir()) {
+                    result.put("success", 0);
+                    result.put("message", "路径创建失败，请重新上传");
+                    return result.toString();
+                }
+            }
+            try{
+                imageFile.transferTo(new File(fileFolder.toString() + "/" + imageFile.getOriginalFilename()));
+                result.put("success",1);
+                result.put("message","成功");
+                result.put("url",folderName+"/"+imageFile.getOriginalFilename());
+                return result.toString();
+
+            }
+            catch (IOException e){
+                System.out.println(e.getMessage());
+                e.getStackTrace();
+            }
+
+        }
+        result.put("success",1);
+        result.put("message","上传失败");
+        return request.toString();
     }
 }
