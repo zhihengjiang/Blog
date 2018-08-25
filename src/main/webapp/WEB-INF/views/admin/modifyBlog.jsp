@@ -120,7 +120,6 @@
             const blogTypeId = $("#blogTypeId").combobox("getValue");
             const keyWord = $("#keyWord").val();
             const contentNoTag = testEditor.getMarkdown();
-            alert(content);
             const summary = contentNoTag.substr(0, 155);
 
             if (title == null || title == '') {
