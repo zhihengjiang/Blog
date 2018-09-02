@@ -6,6 +6,8 @@
 
 <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+    <%--把编辑器的css放在这引用的原因是防止编辑器关于fa的css定义覆盖字体图标本身的css导致图标变形，无法正常显示--%>
+    <link href="${pageContext.request.contextPath}/static/editormd/css/editormd.preview.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/bootstrap3/css/bootstrap.min.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/bootstrap3/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/blog.css">
