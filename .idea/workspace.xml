@@ -9,8 +9,9 @@
   <component name="ChangeListManager">
     <list default="true" id="68a3d9dd-8da9-46de-be0c-185e8a643b88" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foreground/blog/blogDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foreground/blog/blogDetail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mainTemp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mainTemp.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/blogTypeManage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/blogTypeManage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/linkManage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/linkManage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/zhjiang/BaseJUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zhjiang/BaseJUnitTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,74 +29,75 @@
       <file leaf-file-name="writeBlog.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/writeBlog.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1245">
-              <caret line="89" column="99" selection-start-line="87" selection-start-column="16" selection-end-line="89" selection-end-column="99" />
+            <state relative-caret-position="519">
+              <caret line="125" column="40" lean-forward="true" selection-start-line="125" selection-start-column="40" selection-end-line="125" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menu.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foreground/common/menu.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="39" column="17" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="blogDetail.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foreground/blog/blogDetail.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mainTemp.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mainTemp.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mainTemp.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
+            <state relative-caret-position="120">
               <caret line="8" column="65" selection-start-line="8" selection-start-column="65" selection-end-line="8" selection-end-column="65" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modifyBlog.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/modifyBlog.jsp">
+      <file leaf-file-name="linkManage.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/linkManage.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1815">
-              <caret line="121" column="58" selection-start-line="121" selection-start-column="58" selection-end-line="121" selection-end-column="58" />
+            <state relative-caret-position="260">
+              <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp">
+      <file leaf-file-name="BlogTypeAdminController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zhjiang/controller/admin/BlogTypeAdminController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3270">
-              <caret line="218" column="50" selection-start-line="218" selection-start-column="20" selection-end-line="218" selection-end-column="50" />
+            <state relative-caret-position="-771">
+              <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/main.jsp">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="LinkAdminController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zhjiang/controller/admin/LinkAdminController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-126">
+              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="BloggerAdminController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zhjiang/controller/admin/BloggerAdminController.java">
+      <file leaf-file-name="commentReview.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/commentReview.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1515">
-              <caret line="118" column="26" selection-start-line="118" selection-start-column="26" selection-end-line="118" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="-315" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="commentManage.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/commentManage.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-540" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="blogTypeManage.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/blogTypeManage.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="blogManage.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/blogManage.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-315" />
           </provider>
         </entry>
       </file>
@@ -120,6 +122,7 @@
       <find>img</find>
       <find>href</find>
       <find>url</find>
+      <find>&lt;audio</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/main/resources</dir>
@@ -127,6 +130,7 @@
       <dir>$PROJECT_DIR$/src/main/webapp/WEB-INF</dir>
       <dir>$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin</dir>
       <dir>$PROJECT_DIR$/src/main/webapp/WEB-INF/views</dir>
+      <dir>$PROJECT_DIR$</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -142,9 +146,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/zhjiang/service/BlogTypeService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhjiang/service/LinkService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhjiang/service/impl/BloggerServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zhjiang/service/impl/BlogServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zhjiang/service/impl/BlogTypeServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zhjiang/service/impl/CommentServiceImpl.java" />
@@ -193,6 +194,9 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/modifyBlog.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foreground/blog/blogDetail.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mainTemp.jsp" />
+        <option value="$PROJECT_DIR$/src/test/java/com/zhjiang/BaseJUnitTest.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/blogTypeManage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/linkManage.jsp" />
       </list>
     </option>
   </component>
@@ -533,6 +537,29 @@
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
+    <configuration name="BaseJUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Blog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhjiang.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.zhjiang" />
+      <option name="MAIN_CLASS_NAME" value="com.zhjiang.BaseJUnitTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
     <configuration name="BlogAdminControllerTest.testUploadImage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Blog" />
       <extension name="coverage">
@@ -868,10 +895,12 @@
       <item itemvalue="JUnit.CommentControllerTest.testSaveComment" />
       <item itemvalue="JUnit.CommentControllerTest" />
       <item itemvalue="JUnit.BlogAdminControllerTest.testUploadImage" />
+      <item itemvalue="JUnit.BaseJUnitTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Tomcat Server.index" />
+        <item itemvalue="JUnit.BaseJUnitTest" />
         <item itemvalue="JUnit.BlogAdminControllerTest.testUploadImage" />
         <item itemvalue="JUnit.CommentControllerTest.testSaveComment" />
         <item itemvalue="JUnit.CommentControllerTest" />
@@ -911,7 +940,8 @@
       <workItem from="1535001361767" duration="3495000" />
       <workItem from="1535095704348" duration="5794000" />
       <workItem from="1535175405840" duration="15256000" />
-      <workItem from="1535891078143" duration="3664000" />
+      <workItem from="1535891078143" duration="4666000" />
+      <workItem from="1536114811198" duration="4095000" />
     </task>
     <task id="LOCAL-00001" summary="已完成博客系统所有功能的开发">
       <created>1533212034309</created>
@@ -1158,16 +1188,17 @@
       <option name="project" value="LOCAL" />
       <updated>1535193889347</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="修复字体图标css被编辑器css覆盖导致图标无法正常显示的问题">
+      <created>1535895430928</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1535895430928</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BlogAdminControllerTest_testUploadImage - 2018.08.25 at 16h 27m 18s.xml">
-      <configuration name="BlogAdminControllerTest.testUploadImage" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BlogAdminControllerTest_testUploadImage - 2018.08.25 at 16h 28m 03s.xml">
-      <configuration name="BlogAdminControllerTest.testUploadImage" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BlogAdminControllerTest_testUploadImage - 2018.08.25 at 16h 29m 00s.xml">
       <configuration name="BlogAdminControllerTest.testUploadImage" configurationId="JUnit" />
     </history-entry>
@@ -1192,9 +1223,15 @@
     <history-entry file="BlogAdminControllerTest_testUploadImage - 2018.08.25 at 16h 43m 07s.xml">
       <configuration name="BlogAdminControllerTest.testUploadImage" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="BaseJUnitTest - 2018.09.02 at 21h 40m 09s.xml">
+      <configuration name="BaseJUnitTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BaseJUnitTest - 2018.09.02 at 21h 40m 23s.xml">
+      <configuration name="BaseJUnitTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112923000" />
+    <option name="totallyTimeSpent" value="118020000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1221,13 +1258,14 @@
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49887303" weight="0.32561132" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4981217" weight="0.5225225" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49962434" weight="0.32904884" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49962434" weight="0.32818532" />
       <window_info anchor="right" id="Remote Host" order="3" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49326146" visible="true" weight="0.26070625" />
       <window_info anchor="bottom" id="Problems" order="7" weight="0.32904884" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49326146" visible="true" weight="0.2644628" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49887303" weight="0.32904884" />
       <window_info id="Structure" order="1" sideWeight="0.50673854" side_tool="true" weight="0.25694966" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -1241,7 +1279,6 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info id="JRebel" order="2" sideWeight="0.5025707" side_tool="true" weight="0.2644628" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49887303" weight="0.32904884" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -1282,7 +1319,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="将使用ResponseUtil工具类返回请求信息改为使用json字符串返回" />
     <MESSAGE value="修改需要登录验证的页面会进入redirect loop的bug" />
     <MESSAGE value="修改字体颜色" />
     <MESSAGE value="修改mapper层注释" />
@@ -1307,7 +1343,8 @@
     <MESSAGE value="测试图片上传" />
     <MESSAGE value="修复退出后台登录跳转的问题" />
     <MESSAGE value="通知调整" />
-    <option name="LAST_COMMIT_MESSAGE" value="通知调整" />
+    <MESSAGE value="修复字体图标css被编辑器css覆盖导致图标无法正常显示的问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复字体图标css被编辑器css覆盖导致图标无法正常显示的问题" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1315,47 +1352,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/modifyBlog.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1815">
-          <caret line="121" column="58" selection-start-line="121" selection-start-column="58" selection-end-line="121" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3270">
-          <caret line="218" column="50" lean-forward="true" selection-start-line="218" selection-start-column="20" selection-end-line="218" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/main.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhjiang/controller/admin/BloggerAdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1770">
-          <caret line="118" column="26" selection-start-line="118" selection-start-column="26" selection-end-line="118" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/writeBlog.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1335">
-          <caret line="89" column="99" lean-forward="true" selection-start-line="87" selection-start-column="16" selection-end-line="89" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhjiang/entity/Link.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zhjiang/entity/PageBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1433,13 +1429,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/zhjiang/BaseJUnitTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
@@ -1529,9 +1518,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
           <caret line="59" column="41" selection-start-line="59" selection-start-column="41" selection-end-line="59" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1619,9 +1605,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/main.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zhjiang/controller/admin/BloggerAdminController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1515">
@@ -1639,13 +1622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/writeBlog.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1245">
-          <caret line="89" column="99" selection-start-line="87" selection-start-column="16" selection-end-line="89" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/static/css/blog.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
@@ -1655,7 +1631,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foreground/common/menu.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
+        <state relative-caret-position="585">
           <caret line="39" column="17" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
         </state>
       </provider>
@@ -1663,17 +1639,71 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foreground/blog/blogDetail.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mainTemp.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
+        <state relative-caret-position="120">
           <caret line="8" column="65" selection-start-line="8" selection-start-column="65" selection-end-line="8" selection-end-column="65" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/zhjiang/BaseJUnitTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/commentReview.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-315" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/blogManage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-315" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/commentManage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-540" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhjiang/controller/admin/BlogTypeAdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-771">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/blogTypeManage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/writeBlog.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="125" column="40" lean-forward="true" selection-start-line="125" selection-start-column="40" selection-end-line="125" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhjiang/controller/admin/LinkAdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-126">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/linkManage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
         </state>
       </provider>
     </entry>

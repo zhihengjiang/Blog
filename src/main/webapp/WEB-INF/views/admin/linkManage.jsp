@@ -41,7 +41,7 @@
                 return $(this).form("validate");
             }, //进行验证，通过才让提交
             success: function(result) {
-                var result = eval("(" + result + ")"); //将json格式的result转换成js对象
+                result = JSON.parse(result)
                 if(result.success) {
                     $.messager.alert("系统提示", "友情链接保存成功");
                     closeLinkDialog();

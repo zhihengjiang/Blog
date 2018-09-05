@@ -41,7 +41,7 @@
                 return $(this).form("validate");
             }, //进行验证，通过才让提交
             success: function(result) {
-                var result = eval("(" + result + ")"); //将json格式的result转换成js对象
+                result = JSON.parse(result); //将json格式的result转换成js对象
                 if(result.success) {
                     $.messager.alert("系统提示", "博客类别保存成功");
                     $("typeName").val(""); //保存成功后将内容置空

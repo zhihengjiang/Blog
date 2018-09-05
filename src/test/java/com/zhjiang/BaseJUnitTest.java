@@ -8,5 +8,5 @@ import org.springframework.test.context.web.WebAppConfiguration;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"classpath:spring-mvc.xml","classpath:applicationContext.xml"})
 @WebAppConfiguration()
-public class BaseJUnitTest {
+public abstract class BaseJUnitTest {
 }
